@@ -1,20 +1,8 @@
-sudo: false
 language: python
-python: 3.4.6
-cache:
-  pip: true
-  directories:
-    - docs/_build
-
-before_install:
-  - cp docs-requirements.txt requirements.txt
-
-script:
-  - make html SPHINXOPTS=-W
-
-notifications:
-  email: false
-
-branches:
-  exclude:
-    - /^sils\//
+python:
+  - "3.5"
+# command to install dependencies
+install:
+  - pip install coala-bears --pre
+# command to run tests
+script: coala --non-interactive -V

@@ -1,32 +1,4 @@
-[DOCS]
-bears = SpaceConsistencyBear, LineLengthBear
-
-files = **/*.rst, README.rst
-ignore = venv/**
-ignore_length_regex = ^.*https?://
-default_actions = SpaceConsistencyBear: ApplyPatchAction
-use_spaces = True
-
-[commit]
-bears = GitCommitBear
-shortlog_trailing_period = False
-shortlog_regex = ([^:]*|\S+: [A-Z0-9*].*)
-
-[invalidlinks]
-enabled = False
-files = **/*.rst, README.rst
-ignore = venv/**
-bears = InvalidLinkBear
-
-[rstcheck]
-bears = RSTcheckBear
-files = **.rst
-
 [unarchivedlinks]
 files = **/*.rst, README.rst
 ignore = venv/**
 bears = MementoBear
-
-[yml]
-bears = YAMLLintBear
-files = **.yml
