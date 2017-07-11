@@ -22,6 +22,11 @@ bears = InvalidLinkBear
 bears = RSTcheckBear
 files = **.rst
 
+[unarchivedlinks]
+files = **/*.rst, README.rst
+ignore = venv/**
+bears = MementoBear
+
 [yml]
 bears = YAMLLintBear
 files = **.yml
